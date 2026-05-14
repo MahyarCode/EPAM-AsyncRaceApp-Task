@@ -17,6 +17,17 @@ export default defineConfig([
   ...airbnb.base.all,
   ...airbnb.react.all,
   {
+    settings: {
+      'import-x/resolver': {
+        typescript: {
+          alwaysTryTypes: true,
+          project: './tsconfig.json',
+        },
+      },
+    },
+  },
+
+  {
     rules: {
       'import-x/no-extraneous-dependencies': [
         'error',
